@@ -1,0 +1,32 @@
+Naslov:Primena metoda mašinskog učenja za rešavanje inverzne kinematike industrijskih robota uz uvažavanje kinematičkih ograničenja
+
+Tok rada:
+Baza projekta - Klasicna DLS IK
+Nivo 1 - NN IK
+Nivo 2 - NN - DLS hibridni pristup
+Nivo 3 - Joint Limits/Singularity avoidance
+Nivo 4 - Configuration Selection
+Nivo 5 - Collision-aware IK
+
+Kako bih formulisao kostur rada:
+
+10. Istorija robotike
+20. Dalje osnovni pojmovi vezani za robotiku
+21. Vukobratovic
+30. Nastavio bih sa teorijom vezanom za Forward kinematiku i nekim osnovnim pojmovima oko toga
+	Homogene matrice zapis FK
+	DH notacija
+	PoE
+31 Velocity, Kinematics and Statics, uvodi se pojam Jakobijana, singulariteta, manipulabilnosti i veze brzina TCP i uglova u zglobovima
+	Jakobijan interpretacija i slicno
+	Uvodjenje pojma statike kroz jakboijane
+	Space Jacobian
+	Vizualizacija Jakobijana mozda
+	Relacija Space i Body Jakobijana(mozda, treba videti da li pricati o body Jakobijanu)
+	Samim tim da li pomenuti Analiticki jakobijan
+	Statika otvorenih lanaca
+	Analiza Singulariteta
+	Manipulability
+40 Inverzna kinematika
+	Analiticki pristup
+	Numeric pristup
