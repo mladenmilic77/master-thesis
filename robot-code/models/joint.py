@@ -78,4 +78,21 @@ class Joint:
         """Return True if the joint is movable (not fixed)."""
         return self.type != "fixed"
 
-    
+    @property
+    def position_unit(self) -> Literal["Rad", "m"] | None:
+        """Return the unit of position for this joint type."""
+        return None if self.type == "fixed" else "m" if self.type == "prismatic" else "Rad"
+
+    def is_position_within_limits(self, position: float) -> bool:
+        """Check if a given position is within the joint's limits."""
+        if self.position_limits is None:
+            return True  # No limits defined
+
+        if not self.is_movable:
+            raise ValueError("Cannot check position limits for a fixed joint.")
+
+        if not isfinite(position):
+            return False
+        
+        lower, upper = self.position_limits
+        return lower <= position <= upper
